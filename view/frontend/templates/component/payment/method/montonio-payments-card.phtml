@@ -1,0 +1,21 @@
+<?php
+/**
+ * @author    Magebit <info@magebit.com>
+ * @copyright Copyright (c) Magebit, Ltd. (https://magebit.com)
+ * @license   https://magebit.com/code-license
+ */
+
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+?>
+<?php /* The wire Payment Method directive is required to sit in the root DOM element. */ ?>
+<div>
+    <p class="p-4 bg-gray-100 rounded-lg">
+        <?= $escaper->escapeHtml(__('You will be redirected to Montonio to complete your card payment.')) ?>
+    </p>
+</div>

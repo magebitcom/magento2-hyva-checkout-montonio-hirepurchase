@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author    Magebit <info@magebit.com>
+ * @copyright Copyright (c) Magebit, Ltd. (https://magebit.com)
+ * @license   https://magebit.com/code-license
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd"
+>
+    <type name="Hyva\CompatModuleFallback\Model\CompatModuleRegistry">
+        <arguments>
+            <argument name="compatModules" xsi:type="array">
+                <item name="hyva-magento2-checkout-montonio-hirepurchase" xsi:type="array">
+                    <item name="original_module" xsi:type="string">Montonio_Hirepurchase</item>
+                    <item name="compat_module" xsi:type="string">Magebit_HyvaMontonioHirepurchase</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Hyva\Checkout\Model\Magewire\Payment\PlaceOrderServiceProvider">
+        <arguments>
+            <argument name="placeOrderServiceList" xsi:type="array">
+                <item name="montonio_payments" xsi:type="object">
+                    Magebit\HyvaMontonioHirepurchase\Magewire\Checkout\Payment\MontonioPlaceOrderService
+                </item>
+                <item name="montonio_payments_card" xsi:type="object">
+                    Magebit\HyvaMontonioHirepurchase\Magewire\Checkout\Payment\MontonioPlaceOrderService
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>

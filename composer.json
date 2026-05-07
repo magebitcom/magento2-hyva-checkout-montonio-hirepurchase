@@ -1,0 +1,21 @@
+{
+  "name": "magebitcom/magento2-hyva-checkout-montonio-hirepurchase",
+  "version": "1.0.0",
+  "description": "This module enables Montonio Hirepurchase with Hyva Checkout",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "hyva-themes/magento2-compat-module-fallback": "*",
+    "hyva-themes/magento2-hyva-checkout": "*",
+    "montonio/module-hire-purchase": "*"
+  },
+  "license": "MIT",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Magebit\\HyvaMontonioHirepurchase\\": ""
+    }
+  }
+}
