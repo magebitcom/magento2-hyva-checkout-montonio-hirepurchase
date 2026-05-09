@@ -2,7 +2,10 @@
 
 ## Installation
 
-1. Install [Montonio_Hirepurchase](https://www.montonio.com/integrations/magento)
+1. Install [Montonio_Hirepurchase](https://www.montonio.com/integrations/magento).
+If you cannot find the latest version linked in their documentation then use this one:
+https://public.montonio.com/plugins/magento/2/Montonio_Hirepurchase_2.1.3_Ut8Vat.zip.
+The only reliable way to get the latest version of Magento2 package is to ask Montonio support (chat on partner.montonio.com).
 2. Install Compatability Module by running
 ```bash
 composer require magebitcom/magento2-hyva-checkout-montonio-hirepurchase
