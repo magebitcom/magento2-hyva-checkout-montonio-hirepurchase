@@ -13,11 +13,35 @@
             <block name="checkout.payment.method.montonio.payments"
                    as="montonio_payments"
                    template="Magebit_HyvaMontonioHirepurchase::component/payment/method/montonio-payments.phtml"
-                   ifconfig="payment/montonio_payments/active"/>
+                   ifconfig="payment/montonio_payments/active">
+                <arguments>
+                    <argument name="metadata" xsi:type="array">
+                        <item name="icon" xsi:type="array">
+                            <item name="svg" xsi:type="string">bank-payment</item>
+                            <item name="attributes" xsi:type="array">
+                                <item name="width" xsi:type="string">152</item>
+                                <item name="height" xsi:type="string">24</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
             <block name="checkout.payment.method.montonio.payments.card"
                    as="montonio_payments_card"
                    template="Magebit_HyvaMontonioHirepurchase::component/payment/method/montonio-payments-card.phtml"
-                   ifconfig="payment/montonio_payments_card/active"/>
+                   ifconfig="payment/montonio_payments_card/active">
+                <arguments>
+                    <argument name="metadata" xsi:type="array">
+                        <item name="icon" xsi:type="array">
+                            <item name="svg" xsi:type="string">card-payment</item>
+                            <item name="attributes" xsi:type="array">
+                                <item name="width" xsi:type="string">74</item>
+                                <item name="height" xsi:type="string">24</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
         </referenceBlock>
     </body>
 </page>
